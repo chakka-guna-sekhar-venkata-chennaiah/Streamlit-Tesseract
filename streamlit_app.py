@@ -34,7 +34,7 @@ lottie = """
 st.markdown("""
     <style>
         iframe {
-            position: fixed;
+            position: centre;
             top: 2rem;
             bottom: 0;
             left: 0;
