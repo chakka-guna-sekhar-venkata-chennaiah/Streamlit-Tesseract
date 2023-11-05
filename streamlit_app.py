@@ -56,7 +56,7 @@ st.components.v1.html(lottie, width=310, height=310)
 for _ in range(5):
     cols = st.columns([0.5,2])
     with cols[0]: st.image("http://placekitten.com/200/400")
-    with cols[1]: "Some repeated text"*50
+   
 # apply custom css
 with open('helpers/style.css') as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
