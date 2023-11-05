@@ -1,6 +1,8 @@
 import numpy as np
 import pytesseract
 import streamlit as st
+from streamlit_lottie import st_lottie 
+import json
 from pdf2image.exceptions import (PDFInfoNotInstalledError, PDFPageCountError,
                                 PDFPopplerTimeoutError, PDFSyntaxError)
 
