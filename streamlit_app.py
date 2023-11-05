@@ -25,10 +25,6 @@ import json
 import streamlit as st 
 from streamlit_lottie import st_lottie 
 
-import streamlit as st
-from streamlit_lottie import st_lottie
-
-import streamlit as st
 
 lottie = """
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -53,10 +49,7 @@ st.markdown("""
 
 st.components.v1.html(lottie, width=310, height=310)
 
-for _ in range(5):
-    cols = st.columns([0.5,2])
-    with cols[0]: st.image("http://placekitten.com/200/400")
-   
+
 # apply custom css
 with open('helpers/style.css') as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
