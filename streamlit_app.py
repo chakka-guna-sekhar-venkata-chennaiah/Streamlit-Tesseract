@@ -51,7 +51,7 @@ glowing_text_style = '''
     <style>
         .glowing-text {
             font-family: 'Arial Black', sans-serif;
-            font-size: 30px;
+            font-size: 28px;
             text-align: center;
             animation: glowing 2s infinite;
         }
