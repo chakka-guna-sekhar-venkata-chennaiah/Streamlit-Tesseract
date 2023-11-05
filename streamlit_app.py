@@ -31,7 +31,7 @@ st.title("Tesseract OCR - Optical Character Recognition 📝")
 # st.markdown('''**Tesseract OCR** - Optical Character Recognition using Tesseract, OpenCV and Streamlit.<br>
 # This is a simple OCR demo app that can be used to extract text from images. Supported languages see below.
 # ''', unsafe_allow_html=True)
-st.markdown(f'''# {constants.flag_string}''')
+
 
 # set tesseract binary path
 pytesseract.pytesseract.tesseract_cmd = tesseract.find_tesseract_binary()
