@@ -47,8 +47,29 @@ st_lottie(url,
 with open('helpers/style.css') as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
-# add streamlit title
-st.title("Tesseract OCR - Optical Character Recognition 📝")
+glowing_text_style = '''
+    <style>
+        .glowing-text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 48px;
+            text-align: center;
+            animation: glowing 2s infinite;
+        }
+        
+        @keyframes glowing {
+            0% { color: #FF9933; } /* Saffron color */
+            25% { color: #FFFFFF; } /* White color */
+            50% { color: #128807; } /* Green color */
+            
+        }
+    </style>
+'''
+
+# Display the glowing text using st.markdown
+st.markdown(glowing_text_style, unsafe_allow_html=True)
+st.markdown(f'<p class="glowing-text">Tesseract OCR - Optical Character Recognition 📝</p>', unsafe_allow_html=True)
+
+
 
 # add streamlit markdown text
 # st.markdown('''**Tesseract OCR** - Optical Character Recognition using Tesseract, OpenCV and Streamlit.<br>
