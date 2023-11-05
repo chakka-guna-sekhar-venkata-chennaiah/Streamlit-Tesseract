@@ -50,7 +50,7 @@ st.markdown("""
     """, unsafe_allow_html=True
 )
 
-" # 💮 Lottie in the background"
+
 st.components.v1.html(lottie, width=310, height=310)
 
 for _ in range(5):
