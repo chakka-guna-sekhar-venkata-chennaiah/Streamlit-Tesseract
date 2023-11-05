@@ -21,6 +21,27 @@ def set_tesseract_path(tesseract_path: str):
 
 # streamlit config
 st.set_page_config(page_title="Tesseract OCR", page_icon="📝", layout="wide", initial_sidebar_state="expanded")
+import json 
+import streamlit as st 
+from streamlit_lottie import st_lottie 
+
+path = "animation_lolgycuk.json"
+with open(path,"r") as file: 
+	url = json.load(file) 
+
+
+
+#st.title("Adding Lottie Animation in Streamlit WebApp") 
+
+st_lottie(url, 
+	reverse=True, 
+	height=400, 
+	width=400, 
+	speed=1, 
+	loop=True, 
+	quality='high', 
+	key='deep_learning'
+)
 
 # apply custom css
 with open('helpers/style.css') as css:
