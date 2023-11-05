@@ -75,11 +75,6 @@ with st.sidebar:
     angle90 = st.slider("Rotate rectangular [Degree]", min_value=0, max_value=270, value=0, step=90)
     cRotateFree = st.checkbox(label="Rotate in free degrees", value=False)
     angle = st.slider("Rotate freely [Degree]", min_value=-180, max_value=180, value=0, step=1)
-    st.markdown('''---
-# About
-## GitHub
-<https://github.com/Franky1/Streamlit-Tesseract>
-''', unsafe_allow_html=True)
 
 # get index of selected oem parameter
 # FIXME: OEM option does not work in tesseract 4.1.1
