@@ -27,11 +27,10 @@ from streamlit_lottie import st_lottie
 
 
 lottie = """
-
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-<lottie-player src="https://lottie.host/8f8c261a-2f7d-499f-b511-49af8c2b0e5f/cX5UyKFLg9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Q7WY7CfUco.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 """
+
 
 st.markdown("""
     <style>
