@@ -25,23 +25,30 @@ import json
 import streamlit as st 
 from streamlit_lottie import st_lottie 
 
-path = "animation_lolgycuk.json"
-with open(path,"r") as file: 
-	url = json.load(file) 
+import streamlit as st
+from streamlit_lottie import st_lottie
 
+@st.cache
+def load_image_json(path):
 
+    """ Load animation and images from json """
 
-#st.title("Adding Lottie Animation in Streamlit WebApp") 
+    with open(path, 'r') as j:
+        animation = json.loads(j.read())
+        return animation
+        
+back_image = load_image_json('animation_lolgycuk.json')
 
-st_lottie(url, 
-	reverse=True, 
-	height=400, 
-	width=400, 
-	speed=1, 
-	loop=True, 
-	quality='high', 
-	key='deep_learning'
-)
+page_bg_img = '''
+<style>
+.stApp {
+background-image: {st_lottie(back_image, key='back')};
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # apply custom css
 with open('helpers/style.css') as css:
