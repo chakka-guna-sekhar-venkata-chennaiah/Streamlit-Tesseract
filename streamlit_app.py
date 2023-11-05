@@ -28,28 +28,35 @@ from streamlit_lottie import st_lottie
 import streamlit as st
 from streamlit_lottie import st_lottie
 
-@st.cache
-def load_image_json(path):
+import streamlit as st
 
-    """ Load animation and images from json """
+lottie = """
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Q7WY7CfUco.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+"""
 
-    with open(path, 'r') as j:
-        animation = json.loads(j.read())
-        return animation
-        
-back_image = load_image_json('animation_lolgycuk.json')
+st.markdown("""
+    <style>
+        iframe {
+            position: fixed;
+            top: 2rem;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index=-1;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
 
-page_bg_img = '''
-<style>
-.stApp {
-background-image: {st_lottie(back_image, key='back')};
-background-size: cover;
-}
-</style>
-'''
+" # 💮 Lottie in the background"
+st.components.v1.html(lottie, width=310, height=310)
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
+for _ in range(5):
+    cols = st.columns([0.5,2])
+    with cols[0]: st.image("http://placekitten.com/200/400")
+    with cols[1]: "Some repeated text"*50
 # apply custom css
 with open('helpers/style.css') as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
